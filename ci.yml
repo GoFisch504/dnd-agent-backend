@@ -26,9 +26,11 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run FastAPI app lint (optional)
-      run: |
-        echo "🧪 Add test scripts here (e.g., pytest, curl health check)"
+- name: Run Tests with pytest
+  run: |
+    source venv/bin/activate
+    pytest
+
 
     - name: Success message
       run: echo "✅ CI pipeline complete"
